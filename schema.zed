@@ -1,0 +1,15 @@
+definition user {}
+
+definition role {
+    relation can_read_things: user:*
+    relation can_write_things: user:*
+    relation things_admin: user:*
+    relation global_admin: user:*
+}
+
+definition role_binding {
+    relation subject: user
+    relation role: role
+
+
+}
